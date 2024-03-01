@@ -1,0 +1,3 @@
+[submodule "RapidSL"]
+	path = RapidSL
+	url = https://github.com/CSBLaboratory/RapidSL.git
