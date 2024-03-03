@@ -37,4 +37,4 @@ IdentifySelectives.m
 
 
 ### This repository represents the data related to the following submitted manuscript:
-> Manshadi et al.,"Higher order synthetic lethals are keys to minimize cancer treatment effects on normal cells".
+> Manshadi et al.,"Higher order synthetic lethals are keys to minimizing cancer treatment effects on normal cells".
