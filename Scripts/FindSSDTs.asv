@@ -1,14 +1,13 @@
-function Selective_Sols = FindSSDTs(TargetTissue, ListOfTissues, MaxCardinality)
 % This function, FindSSDTs, identifies strictly-selective synthetic 
 % lethal (SL) targets for a given tissue. It considers 
 % the growth rate of all normal tissues to ensure minimal side effects.
 %
 % Inputs:
-% - TargetTissue: The tissue for which strictly-selective SLs are to be
-% found (string)
+% - TargetTissue: The tissue for which selective SL targets are to be found
 % - ListOfTissues: A cell array containing names of all tissues to be considered
-% - MaxCardinality: Maximum cardinality of SL sets
+% - MaxCardinality: Maximum cardinality of SDL sets to consider
 
+function Selective_Sols = FindSSDTs(TargetTissue, ListOfTissues, MaxCardinality)
 
 % Change directory to access context-specific models
 cd('..\Context_Specific_Models')
@@ -26,7 +25,7 @@ for i = 1 : length(ListOfTissues)
     grWT(i) = sol.f;
 end
 
-% Change directory to access SL sets
+% Change directory to access SDL sets
 cd('..\All_Identified_Synthetic_Lethal_Non_Selective')
 
 % Load data for the target tissue
