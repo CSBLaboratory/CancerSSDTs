@@ -30,7 +30,7 @@ end
 cd('..\All_Identified_Synthetic_Lethal_Non_Selective')
 
 % Load data for the target tissue
-FileName = [TargetTissue, '_QGD.mat'];
+FileName = [TargetTissue, '_SLs.mat'];
 load(FileName);
 
 % Initialize variables for tracking trends and solutions
