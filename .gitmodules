@@ -1,3 +1,6 @@
 [submodule "RapidSL"]
 	path = RapidSL
 	url = https://github.com/CSBLaboratory/RapidSL.git
+[submodule "TCGA_Data_Separated_GSE62944"]
+	path = TCGA_Data_Separated_GSE62944
+	url = https://github.com/CSBLaboratory/TCGA_Data_Separated_GSE62944.git
