@@ -9,7 +9,7 @@ The following tools are needed:
 
 ### SSDTs identification process overview:
 
-![alt text](https://github.com/CSBLaboratory/CancerSSDTs/blob/main/Graphical_Abstract.tif.png)
+![alt text](https://github.com/CSBLaboratory/CancerSSDTs/blob/v1.0/Graphical_Abstract.tif.png)
 
 
 ### To Obtain Strictly Selective Lethal Sets, Follow the Steps Below:
