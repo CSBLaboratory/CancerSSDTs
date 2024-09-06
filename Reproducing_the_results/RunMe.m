@@ -5,3 +5,8 @@ clear
 % Run CreateCSM.m to produce Context Specific Models
 CreateCSM;
 
+FindForbidenGenes.m;
+
+FindAllSLs.m
+
+
