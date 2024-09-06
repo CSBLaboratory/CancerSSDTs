@@ -2,7 +2,7 @@ clc
 close
 clear
 % Load the COBRA model:
-Tissues = {'COAD'; 'BRCA'; 'LUAD'; 'LIHC'; 'LUSC'; 'UCEC'; 'HNSC'; 'STAD'; 'KIRC'; 'PRAD'; 'KICH'; 'THCA'; 'KIRP'};
+global Tissues
 MaxCardinality = 1;
 Mode = 'Gene';
 forbiddenSets = [];

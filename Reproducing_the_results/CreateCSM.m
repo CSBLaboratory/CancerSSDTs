@@ -3,7 +3,9 @@
 clc
 close
 clear
-% Create folddr to save the results
+
+% Included tissues in this study:
+global Tissues
 
 % addpath(genpath(pwd))
 
@@ -29,7 +31,6 @@ load Recon2.v04_Consistent_Model.mat;
 
 load medium_example.mat
 load dico_ML.mat
-Tissues = {'COAD'; 'LUAD'; 'LIHC'; 'BRCA'; 'LUSC'; 'UCEC'; 'HNSC'; 'STAD'; 'KIRC'; 'PRAD'; 'KICH'; 'THCA'; 'KIRP'};
 epsilon = 1e-4;
 consensus_proportion = 0.9;
 already_mapped_tag = 0;

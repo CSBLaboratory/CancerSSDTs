@@ -2,9 +2,9 @@ clc
 close
 clear
 % Load the COBRA model:
-Tissues = {'COAD'; 'BRCA'; 'LUAD'; 'LIHC'; 'LUSC'; 'UCEC'; 'HNSC'; 'STAD'; 'KIRC'; 'PRAD'; 'KICH'; 'THCA'; 'KIRP'};
+global Tissues MaxCardinality
 load EliList.mat
-MaxCardinality = 4;
+
 Mode = 'Gene';
 
 for i = 1 : length(Tissues)
