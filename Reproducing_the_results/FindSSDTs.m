@@ -11,7 +11,7 @@ function Selective_Sols = FindSSDTs(TargetTissue, ListOfTissues, MaxCardinality)
 
 
 % Change directory to access context-specific models
-cd('..\Context_Specific_Models')
+% cd('..\Context_Specific_Models')
 
 % Initialize variables
 Controls = cell(length(ListOfTissues), 1);
@@ -26,8 +26,8 @@ for i = 1 : length(ListOfTissues)
     grWT(i) = sol.f;
 end
 
-% Change directory to access SL sets
-cd('..\All_Identified_Synthetic_Lethal_Non_Selective')
+% % Change directory to access SL sets
+% cd('..\All_Identified_Synthetic_Lethal_Non_Selective')
 
 % Load data for the target tissue
 FileName = [TargetTissue, '_SLs.mat'];
@@ -58,7 +58,7 @@ for k = 1 : MaxCardinality
     % Update trends and solutions based on selectivity
     Trend(k, :) = sum(Selective);
     Sols{k, 1} = Sets(sum(Selective, 2) == length(ListOfTissues), :);
-    cd('../Scripts')
+%     cd('../Scripts')
 end
 
 % Store final selective SDL solutions
@@ -73,7 +73,7 @@ for k = 1 : MaxCardinality
         for j = 1 : length(Set(1, :))
             Cur = Set{i, j};
             Cur = {Cur(1:find(Cur == '.')-1)};
-            Unq{j} = Cur; 
+            Unq(j) = Cur; 
             Set(i, j) = Cur;
         end
         Unqi = unique(Unq);

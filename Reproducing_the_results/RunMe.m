@@ -2,15 +2,16 @@ clc
 close
 clear
 
+changeCobraSolver('ibm_cplex');
 % Run CreateCSM.m to produce Context Specific Models
 global Tissues MaxCardinality
-Tissues = {'COAD'; 'LUAD'; 'LIHC'; 'BRCA'; 'LUSC'; 'UCEC'; 'HNSC'; 'STAD'; 'KIRC'; 'PRAD'; 'KICH'; 'THCA'; 'KIRP'};
+Tissues = {'COAD'; 'BRCA'; 'LUAD'; 'LIHC'; 'LUSC'; 'UCEC'; 'HNSC'; 'STAD'; 'KIRC'; 'PRAD'; 'KICH'; 'THCA'; 'KIRP'};
 MaxCardinality = 4;
 
-CreateCSM;
+CreateCSM
 
-FindForbidenGenes.m;
+FindForbidenGenes;
 
-FindAllSLs.m
+FindAllSLs
 
-IdentifySelectives.m
+IdentifySelectives

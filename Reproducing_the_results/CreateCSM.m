@@ -15,7 +15,7 @@ set(groot,'defaulttextinterpreter','none');
 set(groot, 'DefaultAxesTickLabelInterpreter', 'none')
 set(groot, 'defaultLegendInterpreter','none');
 
-feature astheightlimit 2000
+% feature astheightlimit 2000
 
 altcolor= [255 255 255;255 204 204; 255 153 153; 255 102 102; 255 51 51;...
     255 0 0; 204 0 0; 152 0 0; 102 0 0;  51 0 0]/255; %shorter 10% = 1 bar
@@ -71,7 +71,7 @@ for i = 1 : length(Tissues)
     fpkm = [fpkmCancer, Valuesi];
     rownamesNormal = GeneNames;
     colnames = [colnamesCancer; SampleIDsi];
-    discretized = discretize_FPKM(fpkm, colnames, 1); % no figures
+    discretized = discretize_FPKM(fpkm, colnames); % no figures
     %%
     % reconstruct the context-specific models
     %
@@ -85,5 +85,5 @@ for i = 1 : length(Tissues)
     models_keep_consensus(A_final_cancer,1) = 1;
     models_keep_consensus(A_final_control,2) = 1;
     save([Tissues{i}, '_CSM.mat'], 'model_cancer', 'model_control', 'models_keep_consensus');
-    print([Tissues{i}, '_CSM.mat', ' is generated.'])
+    disp([Tissues{i}, '_CSM.mat', ' is generated.'])
 end
